@@ -63,3 +63,4 @@ digits = re.findall(r"\d+", text) # ['123', '456', '7890']
 #### re.sub(pattern, repl, text)
 updated_text = re.sub(r"\d", "X", text) # Contact me at XXX-XXX-dasXXXX
 # r"..." ~ raw string
+# Convert string ---> text[start:stop:step]
