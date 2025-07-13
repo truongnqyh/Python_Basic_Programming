@@ -1,0 +1,4 @@
+2 | play | incomplete
+4 | cook | incomplete
+5 | ngu | incomplete
+6 | messi | incomplete
