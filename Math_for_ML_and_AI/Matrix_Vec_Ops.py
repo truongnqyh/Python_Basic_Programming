@@ -45,6 +45,29 @@ det(A)	             Not zero (≠ 0)	                  Zero (= 0)
 Can solve Ax = b	   Always one unique solution	      May be no or many solutions
 Rank	               Full	                            Not full (dependent rows)
 '''
+
+# DET
 A = np.array([[2,3],[1,4]])
 determinant = np.linalg.det(A)
 print("Determinant of A: ", determinant)
+
+# Matrix Decomposition
+U, S, Vt = np.linalg.svd(A)
+print("U - Left Singular Vectors: \n", U)
+print("S - Singular Value: \n", S)
+print("V Transpose: \n", Vt)
+# Recontruct
+Sigma = np.zeros((2,2))
+np.fill_diagonal(Sigma, S)
+reconstructed = U @ Sigma @ Vt
+print("Reconstructed Matrix: \n", reconstructed)
+
+# A X A-1 = I
+inverse = np.linalg.inv(A)
+print("inverse of A: \n", inverse)
+print("A * A-1: \n", np.dot(A, inverse))
+
+#eigenValues, eigenVectors
+eigenValues, eigenVectors = np.linalg.eig(A)
+print("eigenVal: \n", eigenValues)
+print("eigenVectors: \n", eigenVectors)
