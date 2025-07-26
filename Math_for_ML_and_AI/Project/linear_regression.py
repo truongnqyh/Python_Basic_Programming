@@ -1,6 +1,16 @@
 # ✅ Link to CSV file (house area vs. price)
 csv_path = "https://raw.githubusercontent.com/truongnqyh/Python_Basic_Programming/d346c1b65544b0ba3df40783c5e29e29c4779989/dataset/data_linear.csv"
-
+"""
+Thiết lập model:
+    Hàm dự đoán tuyến tính:
+        y_hat_i = w0 + w1 * x_i
+                = np.dot(x, w)  # dạng vector hóa có thêm bias
+Thiết lập loss function:
+    L = 0.5 * (y_hat_i - y_i)^2  # Hàm mất mát bình phương sai số (MSE)
+Tìm tham số bằng việc tối ưu loss function 
+    sử dụng Gradient Descent: w := w - learning_rate * ∇L
+Dự đoán dữ liệu mới bằng model vừa tìm được
+"""
 # ✅ Import necessary libraries
 import numpy as np
 import pandas as pd
